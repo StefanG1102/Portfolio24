@@ -1,0 +1,20 @@
+<section class="m-10 flex flex-col items-center">
+  <h2 class="text-3xl font-semibold mb-6">Experience</h2>
+  <div class="relative w-full max-w-3xl"> <!-- Set a max width for the content -->
+    <div class="flex flex-col items-center">
+      <div *ngFor="let exp of experience; let i = index" class="mb-12 w-full">
+        <div class="flex items-start">
+          <div class="h-8 w-8 bg-orange-400 rounded-full flex items-center justify-center text-white shadow-lg">
+            <span class="text-xs font-bold">{{ i + 1 }}</span>
+          </div>
+          <div class="ml-4 w-full border-l-2 pl-4">
+            <h3 class="text-xl dark:text-customWhite text-customBlack font-semibold">{{ exp.title }}</h3>
+            <h4 class="text-md dark:text-customWhite text-customBlack text-gray-500">{{ exp.company }}</h4>
+            <p class="text-sm dark:text-customWhite text-customBlack text-gray-400">{{ exp.period }}</p>
+            <p class="text-gray-600 dark:text-customWhite text-customBlack mt-2">{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

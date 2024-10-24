@@ -1,0 +1,262 @@
+<div class="desktop-section">
+  <div class="flex items-start justify-center pb-80 pt-60">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 text-center">
+        <h2 class="text-5xl font-bold tracking-tight dark:text-customWhite text-customBlack sm:text-7xl">Stefan</h2>
+        <h2 class="text-5xl font-bold tracking-tight dark:text-customWhite text-customBlack sm:text-7xl">Ganswint</h2>
+        <a href="homepage.component.css">
+          <p class=" font-light tracking-tight dark:text-customWhite text-customBlack ">Mehr erfahren... </p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="sectionColor py-12 rounded-3xl mt-20 dark:text-customWhite">
+
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-400 mb-4">About</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 ">
+        <img class="col-span-1 w-full h-auto" src="assets/WhatsApp Image 2024-07-31 at 17.49.15.jpeg"
+             alt="Your Image Description">
+        <div class="col-span-2 pl-4 text-left">
+          <h3 class="text-base font-semibold leading-7 tracking-tight text-customWhite">Mein name ist <span
+            class="text-orange-400">Stefan Ganswint</span></h3>
+          <p class=" text-customWhite ">Ich bin Student an der Technischen Hochschule Mittelhessen (kurz. THM).
+            An der Hochschule belege ich den Studiengang Social Media Systems bzw. Digital Media Systems. In diesem
+            Studiengang kann jeder Student zwischen den Fachbereichen Medien, Management und
+            Informatik wählen. Ich habe mich für eine Informatik vertiefung entschieden.
+            Ich bin 24 Jahre alt und habe bereits in diversen Bereichen gearbeitet.
+            Während meiner Abiturzeit habe ich in einem Tanzstudio Breakdance für
+            Kinder von der 1-6 Klasse unterrichtet. Zudem habe ich knapp 2 Jahre als
+            Reinigungskraft bei der Firma WISAG gearbeitet. Beide Arbeitstellen habe
+            ich aufgrund meines Studiums beendet. Seit 2022 Arbeite ich an der THM
+            als Tutor für die Module Wepbasierte Programmierung 1 und 2, sowie die Betreuung des Integrationsprojekt. </p>
+          <div class="grid grid-cols-1 md:grid-cols-4 ">
+            <div class="col-span-2  flex flex-col items-center">
+              <h3 class="pt-6 text-base font-semibold leading-7 tracking-tight text-orange-400">Name</h3>
+              <p class="text-white">Stefan Ganswint</p>
+            </div>
+            <div class="col-span-2  flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Wohnort</h3>
+              <p class="text-white">35396 Gießen</p>
+            </div>
+            <div class="col-span-2 flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Email</h3>
+              <a href="mailto:stefanganswintbewerbung@gmail.com" class="hover:underline text-customWhite" >stefanganswintbewerbung@gmail.com
+              </a>
+            </div>
+            <div class="col-span-2  flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Lebenslauf</h3>
+              <a routerLink="/Lebenslauf"><p class="text-white">Hier Klicken..</p></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="max-w-4xl mx-auto text-center pt-10 sm:pt-20">
+    <h2 class="text-2xl sm:text-3xl font-bold text-customBlack dark:text-customWhite mb-4">Skills</h2>
+
+    <!-- Skills Logos Section -->
+    <div class="flex flex-wrap justify-center gap-10 sm:gap-20 p-4 text-2xl sm:text-4xl mb-16">
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+        alt="HTML Logo"
+        class="h-16 sm:h-20 cursor-pointer"
+        [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'html'}"
+        (click)="selectLogo('html')">
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+        alt="TypeScript Logo"
+        class="h-16 sm:h-20 cursor-pointer"
+        [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'typescript'}"
+        (click)="selectLogo('typescript')">
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"
+        alt="Angular Logo"
+        class="h-16 sm:h-20 cursor-pointer"
+        [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'angular'}"
+        (click)="selectLogo('angular')">
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+        alt="Git Logo"
+        class="h-16 sm:h-20 cursor-pointer"
+        [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'git'}"
+        (click)="selectLogo('git')">
+    </div>
+
+    <!-- Central Bubble with Dynamic Content -->
+    <div class="relative inline-block mt-8 sm:mt-10">
+      <!-- Center Circle -->
+      <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-black flex items-center justify-center border-4 border-orange-500">
+        <img [src]="centerLogo" alt="Center Logo" class="h-12 sm:h-16 w-12 sm:w-16" [ngClass]="{'bubble-animate': animateBubbles}">
+      </div>
+
+      <!-- Surrounding Bubbles -->
+      <div class="absolute -top-12 sm:-top-16 left-1/2 transform -translate-x-1/2">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black flex items-center justify-center border-2 border-orange-500">
+          <p class="text-white" [innerHTML]="bubble1Text"></p>
+        </div>
+      </div>
+
+      <div class="absolute -left-16 sm:-left-20 top-12 sm:top-16">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black flex items-center justify-center border-2 border-orange-500">
+          <p class="text-white" [innerHTML]="bubble2Text"></p>
+        </div>
+      </div>
+
+      <div class="absolute -right-16 sm:-right-20 top-12 sm:top-16">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black flex items-center justify-center border-2 border-orange-500">
+          <p class="text-white" [innerHTML]="bubble3Text"></p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<div class="mobile-section">
+  <div class="flex items-start justify-center pb-80 pt-60">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 text-center">
+        <h2 class="text-5xl font-bold tracking-tight dark:text-customWhite text-customBlack sm:text-7xl">Stefan</h2>
+        <h2 class="text-5xl font-bold tracking-tight dark:text-customWhite text-customBlack sm:text-7xl">Ganswint</h2>
+        <a href="homepage.component.css">
+          <p class=" font-light tracking-tight dark:text-customWhite text-customBlack ">Mehr erfahren... </p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="sectionColor py-12 rounded-3xl mt-20 dark:text-customWhite">
+
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-400 mb-4">About</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 p-5 ">
+        <div class="flex justify-center col-span-1 mb-3">
+          <img class="w-1/2 h-auto" src="assets/WhatsApp Image 2024-07-31 at 17.49.15.jpeg" alt="Ein Bild von Stefan Ganswint">
+        </div>
+        <div class="col-span-2 pl-4 text-left">
+          <h3 class="text-base font-semibold leading-7 tracking-tight text-customWhite">Mein name ist <span
+            class="text-orange-400">Stefan Ganswint</span></h3>
+          <p class=" text-customWhite ">Ich bin Student an der Technischen Hochschule Mittelhessen (kurz. THM).
+            An der Hochschule belege ich den Studiengang Social Media Systems bzw. Digital Media Systems. In diesem
+            Studiengang kann jeder Student zwischen den Fachbereichen Medien, Management und
+            Informatik wählen. Ich habe mich für eine Informatik vertiefung entschieden.
+            Ich bin 24 Jahre alt und habe bereits in diversen Bereichen gearbeitet.
+            Während meiner Abiturzeit habe ich in einem Tanzstudio Breakdance für
+            Kinder von der 1-6 Klasse unterrichtet. Zudem habe ich knapp 2 Jahre als
+            Reinigungskraft bei der Firma WISAG gearbeitet. Beide Arbeitstellen habe
+            ich aufgrund meines Studiums beendet. Seit 2022 Arbeite ich an der THM
+            als Tutor für die Module Wepbasierte Programmierung 1 und 2, sowie die Betreuung des Integrationsprojekt. </p>
+          <div class="grid grid-cols-1 md:grid-cols-4 ">
+            <div class="col-span-2  flex flex-col items-center">
+              <h3 class="pt-6 text-base font-semibold leading-7 tracking-tight text-orange-400">Name</h3>
+              <p class="text-white">Stefan Ganswint</p>
+            </div>
+            <div class="col-span-2  flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Wohnort</h3>
+              <p class="text-white">35396 Gießen</p>
+            </div>
+            <div class="col-span-2 flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Email</h3>
+              <p class="text-white">stefanganswintbewerbung@gmail.com
+              </p>
+            </div>
+            <div class="col-span-4  flex flex-col items-center">
+              <h3 class="pt-10 text-base font-semibold leading-7 tracking-tight text-orange-400">Lebenslauf</h3>
+              <a><p class="text-white">Hier Klicken..</p></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><div class="max-w-4xl mx-auto text-center pt-10 sm:pt-20">
+  <h2 class="text-2xl sm:text-3xl font-bold text-customBlack dark:text-customWhite mb-4">Skills</h2>
+
+  <!-- Skills Logos Section -->
+  <div class="flex flex-wrap justify-center gap-10 sm:gap-20 p-4 text-2xl sm:text-4xl">
+    <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+      alt="HTML Logo"
+      class="h-16 sm:h-20 cursor-pointer"
+      [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'html'}"
+      (click)="selectLogo('html')">
+    <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+      alt="TypeScript Logo"
+      class="h-16 sm:h-20 cursor-pointer"
+      [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'typescript'}"
+      (click)="selectLogo('typescript')">
+    <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"
+      alt="Angular Logo"
+      class="h-16 sm:h-20 cursor-pointer"
+      [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'angular'}"
+      (click)="selectLogo('angular')">
+    <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+      alt="Git Logo"
+      class="h-16 sm:h-20 cursor-pointer"
+      [ngClass]="{'opacity-50': clickedLogo && clickedLogo !== 'git'}"
+      (click)="selectLogo('git')">
+  </div>
+  <div *ngIf="clickedLogo" class="mt-6 p-6 rounded-lg shadow-md transition duration-300 ease-in-out">
+    <h3 class="text-2xl font-semibold text-customBlack dark:text-customWhite mb-4">{{ clickedLogo | titlecase }}</h3>
+    <ul class="list-disc pl-5 text-lg text-customBlack dark:text-customWhite space-y-2">
+      <li *ngIf="clickedLogo === 'html'" class=" flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full  mt-1 mr-2"></span>
+        Das Erstellen von Webseiten mit HTML/CSS
+      </li>
+      <li *ngIf="clickedLogo === 'html'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Programmieren im Mobile First Vorgehen
+      </li>
+      <li *ngIf="clickedLogo === 'html'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Responsives Design identisch zum MockUp
+      </li>
+      <li *ngIf="clickedLogo === 'typescript'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Funktionalität durch TypeSrcipt
+      </li>
+      <li *ngIf="clickedLogo === 'typescript'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Error Handling
+      </li>
+      <li *ngIf="clickedLogo === 'angular'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Komponenten Basiertes Programmieren
+      </li>
+      <li *ngIf="clickedLogo === 'angular'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Verwendung von Routen
+      </li>
+      <li *ngIf="clickedLogo === 'angular'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Code Testing um Fehler zu vermeiden
+      </li>
+      <li *ngIf="clickedLogo === 'git'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Pipelines, Ci/CD
+      </li>
+      <li *ngIf="clickedLogo === 'git'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Verwenendung von Pull Reqeusts
+      </li>
+      <li *ngIf="clickedLogo === 'git'" class="flex items-start">
+        <span class="h-3 w-3 bg-blue-500 rounded-full mt-1 mr-2"></span>
+        Version Controll durch Branch basiertes Arbeiten
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+</div>

@@ -1,0 +1,78 @@
+.texth1{
+  color: #232425;
+
+}
+
+img {
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+/* Custom bubble animation */
+.bubble-animate {
+  animation: bubbleScale 1s ease-in-out forwards;
+}
+
+@keyframes bubbleScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Hexagon Background Container */
+.hexagon-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* To ensure it is behind all content */
+  background-color: #F5F5F5; /* Background color */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Creating a hexagon */
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: #D27A38; /* Hexagon color */
+  margin: 28.87px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid #D27A38;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid #D27A38;
+}
+
+/* Optional: spacing between the hexagons */
+.hexagon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

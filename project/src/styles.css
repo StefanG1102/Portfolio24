@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-[#fffbf7] text-customBlack; /* Light mode styles */
+}
+
+body.dark {
+  @apply bg-[#252525] text-customWhite; /* Dark mode styles */
+}
+
+.sectionColor {
+  background-color: #37363D; /* Background color for sections */
+}
+
+.darkmodeColor {
+  background-color: #37363D; /* Dark mode background color */
+}
+
+.text-white {
+  color: #fffbf7; /* Custom white text color */
+}
+
+/* Styles for desktop (screens larger than 768px) */
+@media (min-width: 769px) {
+  .desktop-section {
+    display: block;
+  }
+  .mobile-section {
+    display: none;
+  }
+}
+
+/* Styles for mobile (screens 768px or smaller) */
+@media (max-width: 768px) {
+  .desktop-section {
+    display: none;
+  }
+  .mobile-section {
+    display: block;
+  }
+}
