@@ -1,5 +1,5 @@
 <section class="m-10 flex flex-col items-center">
-  <h2 class="text-3xl font-semibold mb-6">Experience</h2>
+  <h2 class="text-3xl font-semibold mb-6">Erfahrungen</h2>
   <div class="relative w-full max-w-3xl"> <!-- Set a max width for the content -->
     <div class="flex flex-col items-center">
       <div *ngFor="let exp of experience; let i = index" class="mb-12 w-full">
@@ -10,11 +10,14 @@
           <div class="ml-4 w-full border-l-2 pl-4">
             <h3 class="text-xl dark:text-customWhite text-customBlack font-semibold">{{ exp.title }}</h3>
             <h4 class="text-md dark:text-customWhite text-customBlack text-gray-500">{{ exp.company }}</h4>
-            <p class="text-sm dark:text-customWhite text-customBlack text-gray-400">{{ exp.period }}</p>
+            <p class="text-sm dark:text-gray-500 text-customBlack text-gray-400">{{ exp.period }}</p>
             <p class="text-gray-600 dark:text-customWhite text-customBlack mt-2">{{ exp.description }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <a href="assets/Bewerbung.pdf" download class="bg-orange-400 text-customWhite font-bold py-2 px-4 rounded">
+Bewerbung Runterladen
+  </a>
 </section>
